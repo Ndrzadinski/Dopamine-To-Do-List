@@ -10,6 +10,14 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
+#define OnOff 2       // On off button
+#define Reset 8       // Resets Daily Tasks
+#define BigButton 12  // Task complete button (Opposite)
+#define BlueColor 9   // Blue color of RGB LED 
+#define GreenColor 10 // Green color of RGB LED
+#define RedColor 11   // Red color of RGB LED
+
+
 int numTasks = 9;
 //Create List of Daily Tasks
 String Tasks[] = {
@@ -28,13 +36,6 @@ String Tasks[] = {
 };
 
 LiquidCrystal_I2C lcd(0x27,20,4);
-
-const int OnOff = 2;                 // On off switch for system
-const int Reset = 8;                 // Resets Daily Tasks
-const int BigButton = 12;            // Task complete button (Opposite 
-const int BlueColor = 9;             // Blue color of RGB LED 
-const int GreenColor = 10;           // Green color of RGB LED 
-const int RedColor = 11;             // Red color of RGB LED 
 
 int OnOffState = 0;
 int ResetState = 0;
